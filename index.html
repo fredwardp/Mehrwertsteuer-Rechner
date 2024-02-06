@@ -17,12 +17,24 @@
           <div class="buttons">
             <label for="netto_zu">
               Netto zu Brutto
-              <input type="radio" name="radio" id="netto_zu" />
+              <input
+                type="radio"
+                name="radio"
+                id="netto_zu"
+                value="netto"
+                onclick="radioChange()"
+              />
             </label>
             <div class="small_line"></div>
             <label for="brutto_zu">
               Brutto zu Netto
-              <input type="radio" name="radio" id="brutto_zu" />
+              <input
+                type="radio"
+                name="radio"
+                id="brutto_zu"
+                value="brutto zu netto"
+                onclick="radioChange2()"
+              />
             </label>
           </div>
         </div>
@@ -31,22 +43,24 @@
           <form action="">
             <div class="steuersatz">
               <label for="19">
-                <input type="radio" name="radio2" id="19" /> 19%
+                <input type="radio" name="radio2" id="19" value="0.19" /> 19%
               </label>
               <label for="7">
-                <input type="radio" name="radio2" id="7" /> 7%
+                <input type="radio" name="radio2" id="7" value="0.07" /> 7%
               </label>
             </div>
-            <h2>Nettobetrag <span>(Preis mit Mehrwertsteuer in €)</span></h2>
+            <h2 class="netto_brutto">
+              Nettobetrag <span>(Preis mit Mehrwertsteuer in €)</span>
+            </h2>
             <input type="text" name="" id="number" /> <br />
-            <input type="button" value="Berechnen" />
+            <input type="button" value="Berechnen" onclick="mwsRechner()" />
           </form>
         </div>
         <div class="underline"></div>
         <div class="calculation">
           <h2 class="ergebnis">Ergebnis:</h2>
-          <h3>Mehrwertsteuerbetrag:</h3>
-          <h3>Bruttobetrag <span>(Endpreis)</span>:</h3>
+          <h3 id="mehrwertsteuerbetrag">Mehrwertsteuerbetrag:</h3>
+          <h3 id="bruttobetrag">Bruttobetrag <span>(Endpreis)</span>:</h3>
         </div>
       </article>
     </header>

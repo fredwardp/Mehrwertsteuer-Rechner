@@ -32,7 +32,7 @@ const mwsRechner = () => {
     ).innerHTML = `Mehrwertsteuerbetrag:  ${nurSteuern.toFixed()}€`;
     document.querySelector(
       "#bruttobetrag"
-    ).innerHTML = `Bruttobetrag <span>(Endpreis)</span>:  ${mwsErgebnis.toFixed()}€`;
+    ).innerHTML = `Nettobetrag:  ${mwsErgebnis.toFixed()}€`;
   }
 };
 

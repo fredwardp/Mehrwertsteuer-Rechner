@@ -194,7 +194,7 @@ form span {
   font-weight: 400;
 }
 
-input[type="text"] {
+input[type="number"] {
   width: 70%;
   height: 4.5rem;
   border: unset;
@@ -204,6 +204,7 @@ input[type="text"] {
   margin-bottom: 2.5rem;
   background-color: #f2f2f2;
   font-size: 2rem;
+  padding-left: 1rem;
 }
 
 input[type="button"] {
@@ -242,4 +243,8 @@ h3:first-of-type {
 h3 span {
   font-size: 1.8rem;
   font-weight: 300;
+}
+
+.calculation label {
+  font-size: 1.8rem;
 }

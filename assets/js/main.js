@@ -20,10 +20,10 @@ const mwsRechner = () => {
     const nurSteuern = mwsErgebnis - betrag;
     document.querySelector(
       "#mehrwertsteuerbetrag"
-    ).innerHTML = `Mehrwertsteuerbetrag:  ${nurSteuern}€`;
+    ).innerHTML = `Mehrwertsteuerbetrag:  ${nurSteuern.toFixed()}€`;
     document.querySelector(
       "#bruttobetrag"
-    ).innerHTML = `Bruttobetrag <span>(Endpreis)</span>:  ${mwsErgebnis}€`;
+    ).innerHTML = `Bruttobetrag <span>(Endpreis)</span>:  ${mwsErgebnis.toFixed()}€`;
   } else {
     const mwsErgebnis = betrag / (1 + steuersatz);
     const nurSteuern = betrag - mwsErgebnis;
@@ -39,7 +39,7 @@ const mwsRechner = () => {
 const radioChange = () => {
   document.querySelector(
     ".netto_brutto"
-  ).innerHTML = `<h2 class="netto_brutto">Nettobetrag <span>(Preis mit Mehrwertsteuer in €)</span></h2>`;
+  ).innerHTML = `<h2 class="netto_brutto">Nettobetrag <span>(Preis ohne Mehrwertsteuer in €)</span></h2>`;
   document.querySelector("#bruttobetrag").innerHTML =
     "Bruttobetrag <span>(Endpreis)</span>:";
 };

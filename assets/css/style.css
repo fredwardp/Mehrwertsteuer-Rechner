@@ -128,13 +128,39 @@ article {
 h1 {
   line-height: 120%;
   padding-inline: 5.6rem;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 223, 223, 1),
+    rgba(219, 219, 221, 0.57)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .buttons {
   background-color: var(--primary-dark);
   display: flex;
   justify-content: space-evenly;
-  padding: 0.6rem;
+  text-align: center;
   margin-top: 2rem;
+}
+
+.heading input {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-left: 2rem;
+}
+
+.heading label {
+  cursor: pointer;
+  padding-inline: 7rem;
+  transition: all 0.1s linear;
+  width: 100%;
+  padding-block: 0.6rem;
+  transition: all 0.5s;
+}
+
+.heading label:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .small_line {
@@ -142,6 +168,7 @@ h1 {
   height: 25px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
+  margin-top: 6px;
 }
 
 .calculation {
@@ -189,6 +216,11 @@ input[type="button"] {
   font-family: poppins_semibold;
   font-size: 2rem;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+input[type="button"]:hover {
+  background-color: #28604e;
 }
 
 .underline {

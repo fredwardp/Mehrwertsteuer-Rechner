@@ -1,22 +1,12 @@
 const mwsRechner = () => {
   const nettoBrutto = document.querySelector(".buttons input:checked").value;
-  console.log(nettoBrutto);
   const steuersatz = Number(
     document.querySelector(".calculation input:checked").value
   );
-  console.log(steuersatz);
   const betrag = Number(document.querySelector("#number").value);
-  console.log(betrag);
-
-  const mwsBetrag = document.querySelector("#mehrwertsteuerbetrag").innerText;
-  console.log(mwsBetrag);
-  const bruttoBetrag = document.querySelector("#bruttobetrag").innerText;
-  console.log(bruttoBetrag);
-
-  //   console.log(mwsErgebnis);
 
   if (nettoBrutto == "netto") {
-    const mwsErgebnis = betrag * (1 + steuersatz);
+    const mwsErgebnis = betrag * steuersatz;
     const nurSteuern = mwsErgebnis - betrag;
     document.querySelector(
       "#mehrwertsteuerbetrag"
@@ -25,7 +15,7 @@ const mwsRechner = () => {
       "#bruttobetrag"
     ).innerHTML = `Bruttobetrag <span>(Endpreis)</span>:  ${mwsErgebnis.toFixed()}€`;
   } else {
-    const mwsErgebnis = betrag / (1 + steuersatz);
+    const mwsErgebnis = betrag / steuersatz;
     const nurSteuern = betrag - mwsErgebnis;
     document.querySelector(
       "#mehrwertsteuerbetrag"

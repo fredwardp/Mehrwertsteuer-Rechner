@@ -10,19 +10,21 @@ const mwsRechner = () => {
     const nurSteuern = mwsErgebnis - betrag;
     document.querySelector(
       "#mehrwertsteuerbetrag"
-    ).innerHTML = `Mehrwertsteuerbetrag:  ${nurSteuern.toFixed()}€`;
+    ).innerHTML = `Mehrwertsteuerbetrag:  ${nurSteuern.toFixed(2)}€`;
     document.querySelector(
       "#bruttobetrag"
-    ).innerHTML = `Bruttobetrag <span>(Endpreis)</span>:  ${mwsErgebnis.toFixed()}€`;
+    ).innerHTML = `Bruttobetrag <span>(Endpreis)</span>:  ${mwsErgebnis.toFixed(
+      2
+    )}€`;
   } else {
     const mwsErgebnis = betrag / steuersatz;
     const nurSteuern = betrag - mwsErgebnis;
     document.querySelector(
       "#mehrwertsteuerbetrag"
-    ).innerHTML = `Mehrwertsteuerbetrag:  ${nurSteuern.toFixed()}€`;
+    ).innerHTML = `Mehrwertsteuerbetrag:  ${nurSteuern.toFixed(2)}€`;
     document.querySelector(
       "#bruttobetrag"
-    ).innerHTML = `Nettobetrag:  ${mwsErgebnis.toFixed()}€`;
+    ).innerHTML = `Nettobetrag:  ${mwsErgebnis.toFixed(2)}€`;
   }
 };
 
